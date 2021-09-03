@@ -12,7 +12,8 @@
  export function romNumConv(numParam){
     let romans = ['I', 'V', 'X', 'L', 'C', 'D', 'M', 'V\u0305', 'X\u0305', 'L\u0305', 'C\u0305', 'D\u0305', 'M\u0305']; // list of Roman numeral letters
         // the '\u0305' code adds a line over the character. In Roman numerals, this indicates the letter has its normal value but multiplied by 1,000 
-    let decimalNum = numParam.toString().split('').reverse(); //decimal number is converted to a string, then to an array, then reversed for easier processing
+    let decimalNum = numParam.toString().split('').reverse(); //decimal number is converted to a string, 
+        // then split into an array of characters, then reversed for easier processing
 
     function getLetters(magnitude){ //magnitude will be an index representing whether a digit is in the 1s, 10s, 100s, or 1000s place etc.
         let letters = romans.slice(magnitude*2, (magnitude*2) + 3);
@@ -20,7 +21,7 @@
         return letters;
     }
 
-    function digitBuilder(decimal, index){
+    function digitBuilder(decimal, index){ // a digit's position in the reversed array of chars tells us which letters to use
         let useLetters = getLetters(index); //grab the Roman letters necessary for this particular digit of the decimal-format number
 
         let smallLetter = useLetters[0]; // the #1 letter for any digit. example: I
@@ -30,13 +31,13 @@
         let decDigit = Number(decimal); // convert the decimal digit from a string back to a number
         let romDigStr; //string representing the Roman Numeral-ized digit of the given number
             //----build the Roman digit:
-        switch(decDigit){
+        switch(decDigit){ // concatenate the letters to make the Roman string for that particular digit
             case 1: romDigStr = smallLetter; break;
             case 2: romDigStr = smallLetter + smallLetter; break;
             case 3: romDigStr = smallLetter + smallLetter + smallLetter; break;
             case 4: romDigStr = smallLetter + medLetter; break;
             case 5: romDigStr = medLetter; break;
-            case 6: romDigStr = medLetter + smallLetter; break;
+            case 6: romDigStr = medLetter + smallLetter; break; // example: "I" + "V" = "IV" or 4
             case 7: romDigStr = medLetter + smallLetter + smallLetter; break;
             case 8: romDigStr = medLetter + smallLetter + smallLetter + smallLetter; break;
             case 9: romDigStr = smallLetter + bigLetter; break;
@@ -49,7 +50,7 @@
     let romMap = decimalNum.map(digitBuilder); // call digitBuilder on each char to create a new array using Roman letters
     let finalRoman = romMap.reverse().join(''); // reverse the new array back to original order and join back to a string
     
-    // console and terminal validation of results for user:
+    // console and terminal display of results for user:
     console.log(finalRoman);
     console.log(typeof finalRoman);
     process.stdout.write(finalRoman);
