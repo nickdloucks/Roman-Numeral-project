@@ -6,6 +6,11 @@
         <link rel="stylesheet" type="text/css" href="roman-numeral-converter.css"/>
 
         <script type="module" src="./index.mjs"></script>
+        <!--<script>
+            function changeText(text){
+                document.getElementById("roman-out").innerText = text;
+            }
+        </script>-->
 
     </head>
     <body>
@@ -15,11 +20,16 @@
     <main>
         <div class="input-box">
             <p>Enter a number in decimal format:</p>
-            <input type="text" id="num-in" value="" placeholder="number"/>
+            <input type="text" id="num-in" value="" 
+            placeholder="number"  
+            
+            /><!--onchange="changeText(this.value);"-->
         </div>
         <div class="output-box">
-            <h2 id="roman-out">test</h2>
+            <h2 id="roman-out">output</h2>
         </div>
+
+
     </main>
 
     </body>
