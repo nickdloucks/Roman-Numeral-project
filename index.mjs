@@ -1,9 +1,12 @@
-import { default as romNumConv } from './Roman-Numeral-module.mjs';
+import { romNumConv } from './Roman-Numeral-module.mjs';
+//document.addEventListener("DOMContentLoaded", function() {
 
-console.log(romNumConv(989786));
 
-const output = document.getElementById("roman-out");
+console.log(romNumConv(95));
+
 const inputBox = document.getElementById("num-in");
+const output = document.getElementById("roman-out");
+
 
 /*
 const span = document.getElementById("test-span");
@@ -11,11 +14,12 @@ const textTest = document.createTextNode("testing 1,2,3");
 span.appendChild(textTest);
 */
 function changeText(userInput){
-    output.textContent = userInput;
-    output.innnerText = userInput;
+    const textTest = document.createTextNode(userInput);
+    output.appendChild(textTest);
+    //output.textContent = userInput;
 }
 
-inputBox.addEventListener('change', changeText);
+inputBox.addEventListener('change', changeText("hi"));
 
 
 /*
@@ -27,3 +31,6 @@ function updateRoman(){
 }
 inputBox.addEventListener('change', updateRoman);*/
 
+//"testing 1,2,3"
+
+//});
