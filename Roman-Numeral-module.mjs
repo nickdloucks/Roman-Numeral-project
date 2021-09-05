@@ -58,5 +58,4 @@
     return finalRoman;
 }
 
-export default romNumConv;
 // test comment: does this pull thru from desktop to Github online?
