@@ -51,7 +51,7 @@
     let finalRoman = romMap.reverse().join(''); // reverse the new array back to original order and join back to a string
     
     // console and terminal display of results for user:
-    console.log(finalRoman);
+    console.log(finalRoman + " in RomanNum module");
     console.log(typeof finalRoman);
     //process.stdout.write(finalRoman);
 
