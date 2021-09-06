@@ -53,7 +53,7 @@
     // console and terminal display of results for user:
     console.log(finalRoman);
     console.log(typeof finalRoman);
-    process.stdout.write(finalRoman);
+    //process.stdout.write(finalRoman);
 
     return finalRoman;
 }

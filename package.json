@@ -4,6 +4,7 @@
   "description": "This program takes a decimal format integer and converts it to a Roman Numeral. Currently I am figuring out how to make it into a module with a UI.",
   "main": "index.js",
   "scripts": {
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
