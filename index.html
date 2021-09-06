@@ -5,18 +5,7 @@
         <title>Roman Numeral Converter</title>
         <link rel="stylesheet" type="text/css" href="roman-numeral-converter.css"/>
 
-        <script type="module" src="index.mjs" async>
-            /*window.dig2Rom = function dig2Rom (num){
-	            return romNumConv(num);
-	        }
-            console.log(window.dig2Rom(73) + " using attached window method");
-            console.log("does code inside models work as a script?")*/
-        </script>
-        <!--<script>
-            function changeText(text){
-                document.getElementById("roman-out").innerText = text;
-            }
-        </script>-->
+        <script type="module" src="index.mjs" async></script>
 
     </head>
     <body>
@@ -27,9 +16,9 @@
         <div class="input-box">
             <p>Enter a number in decimal format:</p>
             <input type="text" id="num-in" value="" 
-            placeholder="number"  
-            
-            /><!--onchange="changeText(this.value);"-->
+                placeholder="number"  
+                onchange="window.changeText(this.value);"
+            />
         </div>
         <div class="output-box">
             <h2 id="roman-out">output</h2>
