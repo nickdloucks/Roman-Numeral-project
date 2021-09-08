@@ -10,6 +10,9 @@
  */
  
  export function romNumConv(numParam){
+    if ((typeof numParam !== "string") || (numParam < 1) || ((numParam % 1) !== 0)){
+        return "Invalid input. Please enter a positive integer."
+    }
     let romans = ['I', 'V', 'X', 'L', 'C', 'D', 'M', 'V\u0305', 'X\u0305', 'L\u0305', 'C\u0305', 'D\u0305', 'M\u0305']; // list of Roman numeral letters
         // the '\u0305' code adds a line over the character. In Roman numerals, this indicates the letter has its normal value but multiplied by 1,000 
     let decimalNum = numParam.toString().split('').reverse(); //decimal number is converted to a string, 
