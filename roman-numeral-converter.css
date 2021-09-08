@@ -1,11 +1,25 @@
 header{
+    color: blue;
     margin: 1em;
+    margin: auto;
+    text-align: center;
+}
+.rom-conv{
+    background-color:aqua;
+    margin: 1em;
+    margin: auto;
+    padding: 1em;
+    border-radius: 5px;
 }
 .input-box{
     margin: 1.5em;
-    
+    margin-bottom: .5em;
+    text-align: center;
 }
 #roman-out{
     text-transform: uppercase;
-    margin: 1em;
+    margin: auto;
+    text-align: center;
 }
+/* find a solution to changing styles that 
+doesn't involve disabling the browser's cache*/
