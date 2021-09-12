@@ -38,9 +38,9 @@
             case 1: romDigStr = smallLetter; break;
             case 2: romDigStr = smallLetter + smallLetter; break;
             case 3: romDigStr = smallLetter + smallLetter + smallLetter; break;
-            case 4: romDigStr = smallLetter + medLetter; break;
+            case 4: romDigStr = smallLetter + medLetter; break; // example: "I" + "V" = "IV" or 4
             case 5: romDigStr = medLetter; break;
-            case 6: romDigStr = medLetter + smallLetter; break; // example: "I" + "V" = "IV" or 4
+            case 6: romDigStr = medLetter + smallLetter; break;
             case 7: romDigStr = medLetter + smallLetter + smallLetter; break;
             case 8: romDigStr = medLetter + smallLetter + smallLetter + smallLetter; break;
             case 9: romDigStr = smallLetter + bigLetter; break;
