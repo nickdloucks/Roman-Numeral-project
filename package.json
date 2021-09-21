@@ -7,6 +7,9 @@
     "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "jest": {
+    "verbose": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nickdloucks/Roman-Numeral-project.git"
