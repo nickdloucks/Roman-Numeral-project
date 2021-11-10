@@ -16,10 +16,12 @@
         <div class="rom-conv">
             <div class="input-box">
                 <p>Enter an integer in base-10 format, then press "Enter" key:</p>
-                <input type="text" id="num-in" value="" 
+                <input type="number" min="1" step="1"
+                    id="num-in" value="" 
                     placeholder="number"  
                     onchange="window.changeText(this.value);"
                 />
+                <!-- input should be a positive integer-->
             </div>
             <div class="output-box">
                 <h2 id="roman-out">output</h2>
