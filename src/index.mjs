@@ -1,4 +1,4 @@
-import { romNumConv } from './Roman-Numeral-module.mjs';
+import { default as romNumConv } from './Roman-Numeral-module.mjs';
 
 
 console.log(romNumConv(46) + " in index.mjs");
