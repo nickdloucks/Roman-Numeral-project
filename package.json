@@ -1,8 +1,8 @@
 {
-  "name": "roman-numeral-project-2",
+  "name": "roman-numeral-project",
   "version": "1.0.0",
   "description": "This program takes a decimal format integer and converts it to a Roman Numeral. Currently I am figuring out how to make it into a module with a UI.",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
     "deploy": "gh-pages -d build",
     "start": "lite-server",
@@ -17,7 +17,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/nickdloucks/Roman-Numeral-project/issues"
   },
