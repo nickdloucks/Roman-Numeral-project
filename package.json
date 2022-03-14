@@ -3,25 +3,24 @@
   "version": "1.0.0",
   "description": "This program takes a decimal format integer and converts it to a Roman Numeral. Currently I am figuring out how to make it into a module with a UI.",
   "main": "index.mjs",
-  "scripts": {
-    "deploy": "gh-pages -d build",
-    "start": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "jest": {
-    "verbose": true
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nickdloucks/Roman-Numeral-project.git"
   },
-  "keywords": [],
+  "keywords": ["roman-numeral"],
   "author": "",
   "bugs": {
     "url": "https://github.com/nickdloucks/Roman-Numeral-project/issues"
   },
   "homepage": "https://nickdloucks.github.io/Roman-Numeral-project",
+  "scripts": {
+    "deploy": "gh-pages -d build",
+    "start": "lite-server",
+    "test": "jasmine"
+  },
   "devDependencies": {
+    "jasmine": "^4.0.2",
     "lite-server": "^2.6.1"
   },
   "dependencies": {

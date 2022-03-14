@@ -1,4 +1,4 @@
-import { default as romNumConv } from './Roman-Numeral-module.mjs';
+import { default as romNumConv } from './Roman-Numeral.mjs';
 
 
 console.log(romNumConv(46) + " in index.mjs");
@@ -11,3 +11,9 @@ window.changeText = function changeText(userInput){
     output.textContent = romNumConv(userInput);
     console.log("text has been changed by the changeText event Listener");
 }
+
+// inputBox.addEventListener('keyup', (event)=> {
+//     if (event.code == 'Enter'){
+//         window.changeText(inputBox.value);
+//     }
+// });
