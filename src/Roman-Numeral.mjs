@@ -45,19 +45,19 @@
         let bigLetter = useLetters[2]; // the #10 letter for any digit. example: X (needed to make a #9)
 
         let decDigit = Number(decimal); // convert the decimal digit from a string back to a number
-        let romDigStr; //string representing the Roman Numeral-ized digit of the given number
+        let romDigStr = ''; //string representing the Roman Numeral-ized digit of the given number
             //----build the Roman digit:
         switch(decDigit){ // concatenate the letters to make the Roman string for that particular digit
-            case 1: romDigStr = smallLetter; break;
-            case 2: romDigStr = smallLetter + smallLetter; break;
-            case 3: romDigStr = smallLetter + smallLetter + smallLetter; break;
-            case 4: romDigStr = smallLetter + medLetter; break; // example: "I" + "V" = "IV" or 4
-            case 5: romDigStr = medLetter; break;
-            case 6: romDigStr = medLetter + smallLetter; break;
-            case 7: romDigStr = medLetter + smallLetter + smallLetter; break;
-            case 8: romDigStr = medLetter + smallLetter + smallLetter + smallLetter; break;
-            case 9: romDigStr = smallLetter + bigLetter; break;
-            default: romDigStr = ''; break;
+            case 1: romDigStr = romDigStr.concat(smallLetter); break;
+            case 2: romDigStr = romDigStr.concat(smallLetter, smallLetter); break;
+            case 3: romDigStr = romDigStr.concat(smallLetter, smallLetter, smallLetter); break;
+            case 4: romDigStr = romDigStr.concat(smallLetter, medLetter); break; // example: "I" + "V" = "IV" or 4
+            case 5: romDigStr = romDigStr.concat(medLetter); break;
+            case 6: romDigStr = romDigStr.concat(medLetter, smallLetter); break;
+            case 7: romDigStr = romDigStr.concat(medLetter, smallLetter, smallLetter); break;
+            case 8: romDigStr = romDigStr.concat(medLetter, smallLetter, smallLetter, smallLetter); break;
+            case 9: romDigStr = romDigStr.concat(smallLetter, bigLetter); break;
+            default: break;
         }
 
         return romDigStr;
@@ -67,8 +67,8 @@
     let finalRoman = romMap.reverse().join(''); // reverse the new array back to original order and join back to a string
     
     // console and terminal display of results for user:
-    console.log(finalRoman + " in RomanNum module");
-    console.log(typeof finalRoman);
+    // console.log(finalRoman + " in RomanNum module");
+    // console.log(typeof finalRoman);
     //process.stdout.write(finalRoman);
 
     return finalRoman;
