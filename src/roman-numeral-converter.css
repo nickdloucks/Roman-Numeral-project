@@ -1,25 +1,29 @@
+html{
+    font-size: 24px;
+    background-color: #cccccc;
+}
 header{
     color: blue;
     margin: 1em;
-    margin: auto;
     text-align: center;
 }
 .rom-conv{
     background-color:aqua;
     margin: 1em;
-    margin: auto;
-    padding: 1em;
+    padding: 0.5em;
     border-radius: 5px;
 }
 .input-box{
     margin: 1.5em;
     margin-bottom: .5em;
     text-align: center;
+    font-size: 1.25em;
+}
+aside{
+    font-size: 0.75rem; 
 }
 #roman-out{
     text-transform: uppercase;
-    margin: auto;
+    margin: 1rem;
     text-align: center;
 }
-/* find a solution to changing styles that 
-doesn't involve disabling the browser's cache*/
