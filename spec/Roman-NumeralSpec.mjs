@@ -1,9 +1,8 @@
 import { default as toRN } from "../src/Roman-Numeral.mjs";
 
 describe('A reference tool: Converts base-10 numbers to Roman Numerals.', ()=>{
-    it('Does NOT accept floating point numbers.', ()=>{
-        expect(toRN(4.1)).toEqual("Invalid input: \
-        Please enter a positive integer.");
+    it('Truncates floating point numbers.', ()=>{
+        expect(toRN(4.1)).toEqual("IV");
     });
 
     it('Parses single-digit numbers correctly.', ()=>{
