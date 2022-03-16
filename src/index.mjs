@@ -1,19 +1,15 @@
-import { default as romNumConv } from './Roman-Numeral.mjs';
+import { default as toRN } from './Roman-Numeral.mjs';
 
-
-console.log(romNumConv(46) + " in index.mjs");
-
-
-const inputBox = document.getElementById("num-in");
+// const inputBox = document.getElementById("num-in");
 const output = document.getElementById("roman-out");
 
 window.changeText = function changeText(userInput){
-    output.textContent = romNumConv(userInput);
-    console.log("text has been changed by the changeText event Listener");
+    output.textContent = toRN(userInput);
+    console.log("User input has been processed by the changeText() event Listener.");
 }
 
 // inputBox.addEventListener('keyup', (event)=> {
 //     if (event.code == 'Enter'){
 //         window.changeText(inputBox.value);
 //     }
-// });
+// });  // ^^ JS event listener to use as alternative if <onChange> property does not work in the HTML for the input element.
