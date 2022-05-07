@@ -1,7 +1,7 @@
 {
   "name": "roman-numeral-project",
-  "version": "1.0.1",
-  "description": "This program takes an integer in base-10 format and converts it to a Roman Numeral. Version 1.0.1 patches DotZero(s)? bug.",
+  "version": "1.0.2",
+  "description": "This program takes an integer in base-10 format and converts it to a Roman Numeral. Version 1.0.1 patches DotZero(s)? bug. Version 1.0.2 adds an instruction for the 'num lock' key.",
   "main": "index.mjs",
 
   "repository": {
